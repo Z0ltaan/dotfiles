@@ -170,11 +170,13 @@ return {
             },
           },
         },
+        jdtls = {},
       }
 
       local formatters = {
         'stylua', -- Used to format Lua code
         'prettier',
+        'google-java-format',
       }
 
       -- Ensure the servers and tools above are installed

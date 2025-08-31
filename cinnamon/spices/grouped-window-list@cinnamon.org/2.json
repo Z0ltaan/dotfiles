@@ -359,7 +359,6 @@
         "value": [
             "google-chrome.desktop",
             "org.telegram.desktop.desktop:flatpak",
-            "org.kde.krita.desktop:flatpak",
             "steam.desktop"
         ]
     },

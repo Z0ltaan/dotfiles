@@ -39,7 +39,7 @@ return {
         -- javascript = {},
         -- html = {},
         -- cmake = {},
-        -- java = {},
+        java = { 'google-java-format' },
       },
       formatters = {
         clang_format = {
