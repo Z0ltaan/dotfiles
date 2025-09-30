@@ -1,0 +1,1 @@
+wm.window_fullscreen_toggle

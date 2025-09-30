@@ -35,11 +35,12 @@ return {
         c = { 'clang_format' },
         markdown = { 'prettier' },
         markdown_inline = { 'prettier' },
+        sql = { 'sql_formatter' },
         -- python = {},
         -- javascript = {},
         -- html = {},
         -- cmake = {},
-        java = { 'google-java-format' },
+        java = { 'astyle' },
       },
       formatters = {
         clang_format = {

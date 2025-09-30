@@ -1,0 +1,64 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Delete">
+      <i c="2" l="1757097205183" />
+    </e>
+    <e n="$Undo">
+      <i c="2" l="1757098758766" />
+    </e>
+    <e n="Annotate">
+      <i c="2" l="1757097286239" />
+    </e>
+    <e n="CollapseBlock">
+      <i c="1" l="1757098772021" />
+    </e>
+    <e n="CollapseSelection">
+      <i c="2" l="1757098767405" />
+    </e>
+    <e n="ConvertToUnixLineSeparators">
+      <i c="1" l="1757097296637" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="6" l="1757098777906" />
+    </e>
+    <e n="EditorChooseLookupItemReplace">
+      <i c="1" l="1757098784040" />
+    </e>
+    <e n="EditorCut">
+      <i c="2" l="1757098742797" />
+    </e>
+    <e n="EditorEnter">
+      <i c="1" l="1757098781866" />
+    </e>
+    <e n="EditorEscape">
+      <i c="1" l="1757098724696" />
+    </e>
+    <e n="EditorRight">
+      <i c="2" l="1757098777766" />
+    </e>
+    <e n="EditorTab">
+      <i c="1" l="1757098221082" />
+    </e>
+    <e n="ImportSettings">
+      <i c="1" l="1757098318472" />
+    </e>
+    <e n="SaveAll">
+      <i c="5" l="1757098778731" />
+    </e>
+    <e n="ShowSettings">
+      <i c="3" l="1757098682069" />
+    </e>
+    <e n="WelcomeScreen.OpenProject">
+      <i c="1" l="1757097117351" />
+    </e>
+    <e n="com.intellij.ide.startup.importSettings.chooser.productChooser.SkipImportAction">
+      <i c="1" l="1757097071099" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.customFrameDecorations.header.toolbar.MainMenuButton$ShowMenuAction">
+      <i c="5" l="1757098678049" />
+    </e>
+    <e n="com.intellij.ui.CommonActionsPanel$RemoveButton">
+      <i c="1" l="1757098707613" />
+    </e>
+  </component>
+</application>

@@ -152,14 +152,8 @@ return {
 
       local capabilities = require('blink.cmp').get_lsp_capabilities()
 
-      --  Add any additional override configuration in the following tables. Available keys are:
-      --  - cmd (table): Override the default command used to start the server
-      --  - filetypes (table): Override the default list of associated filetypes for the server
-      --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
-      --  - settings (table): Override the default settings passed when initializing the server.
-      --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        clangd = { cmd = { 'clangd', '--header-insertion=never' } },
+        clangd = { cmd = { 'clangd' } },
         cmake = {},
         lua_ls = {
           settings = {
@@ -170,13 +164,15 @@ return {
             },
           },
         },
-        jdtls = {},
+        jdtls = { cmd = { 'jdtls' }, settings = {} },
+        pyright = { cmd = { 'pyright-langserver', '--stdio' } },
+        sqlls = {},
       }
 
       local formatters = {
-        'stylua', -- Used to format Lua code
+        'stylua',
         'prettier',
-        'google-java-format',
+        'sql-formatter',
       }
 
       -- Ensure the servers and tools above are installed

@@ -1,6 +1,6 @@
 cinnamon*
 *torrent*
-/lazy-lock.json
+nvim/lazy-lock.json
 gtk*/
 neofetch/
 google-chrome/

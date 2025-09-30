@@ -1,0 +1,4 @@
+[Bookmarks]
+[Recent]
+/home/georv/blender/models/stephan/
+/home/georv/blender/

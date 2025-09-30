@@ -1,0 +1,54 @@
+<application>
+  <component name="FileEditorProviderManager">{}</component>
+  <component name="LangManager">
+    <option name="languageName" value="JAVA" />
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontSize" value="19.0" />
+    <option name="presentationModeIdeScale" value="1.75" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "LAST_CALCULATED_COLOR_INDEX_KEY": "5",
+    "MarketplacePluginsSearchHistory": "/tag:Theme\ntheme\nthem\nth",
+    "PluginConfigurable.selectionTab": "1",
+    "RunOnceActivity.TerminalOptionsProvider.migration.2025.1.1": "true",
+    "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
+    "RunOnceActivity.git.modal.commit.toggle": "true",
+    "SettingsSearchHistory": "export",
+    "ask.about.ctrl.y.shortcut.v2": "true",
+    "build.toolwindow.Sync.selection.state": "com.intellij.build.BuildTreeConsoleView",
+    "defaultJdkConfigured": "true",
+    "experimental.ui.on.first.startup": "true",
+    "experimental.ui.used.version": "252.25557.131",
+    "export.settings.marked": "options/ide.general.xml|codestyles|options/profiler.xml|options/csvSettings.xml|options/dataViewsSettings.xml|options/project.default.xml|options/editor-font.xml|options/DontShowAgainFeedbackService.xml|options/colors.scheme.xml|options/find.xml|options/editor.xml|options/k2-feedback.xml|options/keymapFlags.xml|keymaps|options/ide-features-trainer.xml|options/log-categories.xml|options/laf.xml|options/editor.xml|options/profilerRunConfigurations.xml|options/ui.lnf.xml|options/baseRefactoring.xml|options/debugger.xml|",
+    "fileTypeChangedCounter": "1",
+    "fontSizeToResetConsole": "16.25",
+    "fontSizeToResetEditor": "16.25",
+    "got.it.tooltip.Plugins Auto-Update": "1",
+    "got.it.tooltip.settings.sync.in.settings": "1",
+    "idea.islands.enabled": "true",
+    "input.method.disabler.muted": "true",
+    "installed.kotlin.plugin.version": "252.25557.131-IJ",
+    "last_opened_file_path": "/home/georv/Documents/settings ide/settings_intelijidea.zip",
+    "llm.installer.last.toolwindow.state": "LLM_INSTALLER",
+    "migrated.non.roamable.values.from.general.settings": "true",
+    "previousColorScheme": "_@user_Dark",
+    "registry.to.advanced.settings.migration.build": "IC-252.25557.131",
+    "tab_selection_count": "1",
+    "terminal.gen.one.option.visible": "false",
+    "terminal.is.new.user": "true"
+  },
+  "keyToStringList": {
+    "file.chooser.recent.files": [
+      "/home/georv/Documents/settings ide/settings_intelijidea.zip",
+      "/home/georv/work/spbpu-labs/java/course2"
+    ],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.intellij.profiler.ultimate.hprof.impl.HprofFileTypeDetector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+</application>
