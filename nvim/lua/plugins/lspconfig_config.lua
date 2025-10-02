@@ -166,7 +166,7 @@ return {
         },
         jdtls = { cmd = { 'jdtls' }, settings = {} },
         pyright = { cmd = { 'pyright-langserver', '--stdio' } },
-        sqlls = {},
+        -- sqlls = {},
         ts_ls = {
           -- cmd = { 'vscode-eslint-language-server', '--stdio' },
           -- root_markers = {
