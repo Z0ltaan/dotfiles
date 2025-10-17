@@ -164,18 +164,9 @@ return {
             },
           },
         },
-        jdtls = { cmd = { 'jdtls' }, settings = {} },
+        -- jdtls = { cmd = { 'jdtls' }, settings = {} },
         pyright = { cmd = { 'pyright-langserver', '--stdio' } },
-        -- sqlls = {},
-        ts_ls = {
-          -- cmd = { 'vscode-eslint-language-server', '--stdio' },
-          -- root_markers = {
-          --   'package.json',
-          --   'package-lock.json',
-          --   '.git',
-          --   'node_modules',
-          -- },
-        },
+        ts_ls = {},
       }
 
       local formatters = {
