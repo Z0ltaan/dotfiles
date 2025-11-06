@@ -17,11 +17,17 @@ rtp:prepend(lazypath)
 
 require('lazy').setup({
   require 'plugins.which_key',
+  -- require 'plugins.netrw',
+  require 'plugins.devicons',
   require 'plugins.telescope',
   require 'plugins.lazydev_config',
   require 'plugins.lspconfig_config',
   require 'plugins.conform_config',
   require 'plugins.blink_config',
+  -- {
+  --   'stevearc/oil.nvim',
+  --   opts = {},
+  -- },
   require 'plugins.colorscheme',
   require 'plugins.todocomments_config',
   require 'plugins.mini_config',
@@ -30,7 +36,6 @@ require('lazy').setup({
   require 'plugins.mdrenderer_config',
 
   require 'kickstart.plugins.autopairs',
-  require 'kickstart.plugins.neo-tree',
   --
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
@@ -57,7 +62,5 @@ require('lazy').setup({
   },
 })
 
-local _markdownToggle = require('render-markdown').toggle
-vim.keymap.set('n', '<leader>tr', _markdownToggle, { desc = '[T]oggle [R]ender' })
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
+-- local _markdownToggle = require('render-markdown').toggle
+-- vim.keymap.set('n', '<leader>tr', _markdownToggle, { desc = '[T]oggle [R]ender' })
