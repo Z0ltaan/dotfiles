@@ -5,10 +5,8 @@
 !btop/
 !godot/
 !nvim/
-!pix/
 !vlc/
 !wireshark/
-X-Cinnamon-xdg-terminals.list
 mimeapps.list
 user-dirs.dirs
 user-dirs.locale
