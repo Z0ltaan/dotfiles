@@ -30,6 +30,7 @@ return {
         end
       end,
       formatters_by_ft = {
+        cmake = { 'cmake-format' },
         lua = { 'stylua' },
         cpp = { 'clang_format' },
         c = { 'clang_format' },
@@ -45,12 +46,11 @@ return {
         less = { 'prettier' },
         jsx = { 'prettier' },
 
-        -- cmake = {},
         java = { 'astyle' },
       },
       formatters = {
         clang_format = {
-          prepend_args = { '--style=file', '--fallback-style=LLVM' },
+          prepend_args = { '--style=file', '--fallback-style=Mozilla' },
         },
       },
     },

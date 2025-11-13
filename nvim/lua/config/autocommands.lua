@@ -1,10 +1,3 @@
--- [[ Basic Autocommands ]]
---  See `:help lua-guide-autocommands`
-
--- Highlight when yanking (copying) text
---  Try it with `yap` in normal mode
---  See `:help vim.hl.on_yank()`
---
 vim.api.nvim_create_autocmd('BufEnter', {
   desc = 'Set indents and no comment on new line',
   callback = function()
@@ -16,7 +9,6 @@ vim.api.nvim_create_autocmd('BufEnter', {
 })
 
 vim.api.nvim_create_autocmd('FileType', {
-  -- group = 'mine-group',
   pattern = 'help',
   command = 'wincmd L',
 })
@@ -28,3 +20,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+
+-- nvim.api.nvim_create_autocmd ''

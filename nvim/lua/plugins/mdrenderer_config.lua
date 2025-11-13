@@ -28,5 +28,8 @@ return {
       },
       latex = { enabled = false },
     },
+    config = function()
+      vim.keymap.set('n', '<leader>tr', require('render-markdown').toggle, { desc = '[T]oggle [R]ender' })
+    end,
   },
 }

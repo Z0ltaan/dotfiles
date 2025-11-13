@@ -1,9 +1,9 @@
 return {
   {
     'nvim-treesitter/nvim-treesitter',
+    event = 'UiEnter',
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
-    -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+    main = 'nvim-treesitter.configs',
     opts = {
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'cpp' },
       auto_install = true,
@@ -16,11 +16,12 @@ return {
       },
       indent = { enable = false, disable = { 'ruby' } },
     },
-    -- There are additional nvim-treesitter modules that you can use to interact
-    -- with nvim-treesitter. You should go explore a few and see what interests you:
+    -- config = function(_, opts)
+    --   require('nvim-treesitter').setup(opts)
     --
-    --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
-    --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-    --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+    -- INFO: I CAN ACTUALLY ADD CUSTOM FILETYPES TO BE PROCESSED WITH EXISTING CONFIGS
+    -- vim.treesitter.language.register(lang, filetype)
+
+    -- end,
   },
 }

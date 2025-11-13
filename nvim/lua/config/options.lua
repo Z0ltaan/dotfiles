@@ -56,3 +56,7 @@ vim.o.cursorline = true
 vim.o.scrolloff = 8
 
 vim.o.confirm = true
+
+--NETRW
+vim.g.netrw_hide = 1
+vim.g.netrw_list_hide = '\\(^\\|\\s\\s\\)\\zs\\.\\S\\+'
