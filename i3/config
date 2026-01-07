@@ -1,0 +1,453 @@
+###########################################################################
+###########################################################################
+################       Start of all the settings          #################
+###########################################################################
+###########################################################################
+
+# KEY DEFINITIONS TO REMEMBER
+
+# $Mod = WINDOWS key or Super key or Mod4
+# Mod1 = ALT key
+# Control = CTRL key
+# Shift = SHIFT key
+# Escape = ESCAPE key
+# Return = ENTER or RETURN key
+# Pause = PAUSE key
+# Print = PRINT key
+# Tab = TAB key
+
+
+
+# Key to rule them all : windows or Alt key?
+
+# Mod4 = windows key on keyboard or super key
+# Alt key is Mod1 if you want to change the $mod key
+set $mod Mod4
+
+
+################### STOPPING A PROGRAM #########################
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+################### MOVING AROUND ##############################
+
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+k focus down
+bindsym $mod+j focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+
+################### TILING PARAMETERS ##############################
+
+# orientation for new workspaces 
+default_orientation horizontal
+
+# split in horizontal orientation
+bindsym $mod+b split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+# bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+f layout toggle split
+
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+################### RELOAD AND EXIT #####################
+
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+
+################### RESIZE ##############################
+
+
+# resize window (you can also use the mouse for that)
+
+bindsym $mod+r mode "resize"
+
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym m resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+
+################### FONTS ######################
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+# choose your font
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# font -misc-fixed-bold-r-normal-*-15-140-75-75-c-90-iso10646-1
+# from ttf-chromeos-fonts
+font pango:Noto Mono Regular 11
+
+
+################### MENU ######################
+
+# start dmenu
+bindsym $mod+d exec dmenu_run -fn 'NotoMonoRegular:bold:pixelsize=12' 
+
+# start j4-dmenu (based on desktop files in /usr/share/applications)
+# https://github.com/enkore/j4-dmenu-desktop
+bindsym $mod+shift+d exec j4-dmenu-desktop --dmenu="dmenu -fn 'NotoMonoRegular:bold:pixelsize=18' -l 20"
+#bindsym $mod+shift+d exec j4-dmenu-desktop --dmenu="dmenu -fn 'monospace:bold:pixelsize=15'"
+
+# start up i3-dmenu-desktop
+bindsym $mod+mod1+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -fn 'Inconsolata:bold:pixelsize=20S'"
+
+
+################### DUAL SCREEN ######################
+
+
+# setting variables for later use
+# use xrandr and/or arandr to know the names of your monitors
+# use this line to tell which monitor is on the right
+# xrandr --output DVI-I-2 --right-of DVI-I-1 --auto
+
+# my current setup
+set $firstMonitor DVI-I-1
+set $secondMonitor DVI-I-2
+
+set $firstMonitor LVDS1
+#set $secondMonitor LVDS1
+
+#set $firstMonitor DVI-I-2
+#set $secondMonitor VGA-0
+
+#set $firstMonitor DVI-I-2
+#set $secondMonitor DVI-I-3
+
+#set $firstMonitor DVI-0
+#set $secondMonitor DVI-1
+
+workspace 1 output $firstMonitor
+workspace 2 output $firstMonitor
+workspace 3 output $firstMonitor
+workspace 4 output $firstMonitor
+workspace 5 output $firstMonitor
+workspace 6 output $secondMonitor
+workspace 7 output $secondMonitor
+workspace 8 output $secondMonitor
+workspace 9 output $secondMonitor
+workspace 10 output $secondMonitor
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+
+################### EXECUTE ######################
+
+
+# TRAY APPLICATIONS
+
+# num lock activated
+# exec_always --no-startup-id numlockx on
+# # insync
+# exec insync start
+# # volume
+# exec pasystray
+# #exec volti
+# #exec volumeicon
+# #variety
+# exec variety
+#
+# # clipit
+# exec clipit
+#
+
+#Music
+#exec --no-startup-id spotify
+#for_window [class="Spotify"] focus
+
+
+################### SHORTCUTS WORKSPACES ######################
+
+# switch to workspace with urgent window automatically
+for_window [urgent=latest] focus
+
+
+################### SCREENSHOTS ######################
+
+
+# bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+#bindsym Print exec scrot '%Y-%m-%d-%H-%M-%S.jpg' -e 'mv $f ~/Pictures/' && sleep 1 && exec notify-send 'screenshot has been saved in ~/Pictures'
+# bindsym Control+Print exec gnome-screenshot -i
+#bindsym shift+Print exec shutter
+#bindsym control+Print exec xfce4-screenshooter
+
+
+################### FLOATING OR TILED ######################
+
+
+#floating enabled from some programs - find with xprop
+#for_window [class="Gnome-disks"] floating enable
+# for_window [class="^Skype$"] floating enable
+# for_window [class="^Gnome-font-viewer$"] floating enable
+# for_window [class="^Gpick$"] floating enable
+#for_window [class="^Vlc$"] floating enable
+#for_window [class="^Spotify$"] floating enable workspace 10
+#for_window [instance="gimp"] floating enable
+# for_window [window_role="^gimp-toolbox-color-dialog$"] floating enable
+#for_window [instance="variety"] floating enable
+#for_window [class="Gnome-system-monitor"] floating enable
+#for_window [class="Mate-system-monitor"] floating enable
+#for_window [class="Xfce4-taskmanager"] floating enable
+#for_window [class="Brasero"] floating enable
+#for_window [class="Xfburn"] floating enable
+# for_window [class="Xfce4-appfinder"] floating enable
+#for_window [class="Wine"] floating enable
+# for_window [class="Pavucontrol"] floating enable
+# for_window [window_role="pop-up"] floating enable
+# for_window [window_role="^Preferences$"] floating enable
+# for_window [window_role="setup"] floating enable
+# for_window [title="^Terminator Preferences$"] floating enable
+#for_window [class="Font-manager"] floating enable
+# for_window [class="System-config-printer.py"] floating enable
+# for_window [class="Nitrogen"] floating enable
+for_window [class="Nemo"] floating enable
+# for_window [title="Deleting"] floating enable  
+# for_window [title="Moving"] floating enable
+# for_window [class="Unetbootin.elf"] floating enable
+# for_window [class="Galculator"] floating enable
+# for_window [class="Usb-creator-gtk"] floating enable
+# for_window [instance="script-fu"] border normal
+# for_window [class="Imagewriter"] floating enable
+#for_window [class="MintUpdate.py"] floating enable
+#for_window [class="Bleachbit"] floating enable
+#for_window [class="Hexchat"] floating disable
+# for_window [class="Xfce4-settings-manager"] floating disable
+# for_window [class="Gnome-control-center"] floating disable
+# for_window [class="Gnome-terminal"] focus
+
+#Popups during fullscreen mode
+# popup_during_fullscreen smart
+
+
+################### MODE_SYSTEM ######################
+
+
+# bindsym $mod+Pause mode "$mode_system"
+#
+# set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+# mode "$mode_system" {
+#     bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh lock, mode "default"
+#     bindsym e exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
+#     bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
+#     bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit.sh hibernate, mode "default"
+#     bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
+#     bindsym Shift+s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh shutdown, mode "default"
+#
+#     # back to normal: Enter or Escape
+#     bindsym Return mode "default"
+#     bindsym Escape mode "default"
+# }
+
+
+################### AUDIO ######################
+
+
+# bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '5%+'"
+# bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '5%-'"
+# bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
+#https://github.com/acrisci/playerctl/
+# bindsym XF86AudioPlay exec playerctl play-pause
+# bindsym XF86AudioNext exec playerctl next
+# bindsym XF86AudioPrev exec playerctl previous
+# bindsym XF86AudioStop exec playerctl stop
+#bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause" 
+#bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next" 
+#bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+#bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+
+
+
+################### BAR ######################
+
+
+# bar toggle, hide or show 
+# bindsym $mod+b bar mode toggle
+
+
+################### BORDER ######################
+
+
+# Border control
+# hide_edge_borders both
+#bindsym $mod+shift+b exec i3-msg border toggle
+
+#changing border style
+#bindsym $mod+t border normal
+#bindsym $mod+y border 1pixel
+#bindsym $mod+u border none
+
+
+default_border pixel 2
+default_floating_border pixel 1
+#new_window pixel 1
+# new_window normal
+#new_window none
+
+#new_float pixel 1
+# new_float normal
+#new_float none
+
+
+###################       KEYBOARD      ##############################
+
+
+################### TITLE BAR ######################
+
+
+
+################### BAR APPEARANCE ######################
+
+
+bar {
+
+    # height 25
+    workspace_buttons yes
+    # font pango:DroidSansMono 13
+    font pango:Noto Moto 11
+    #you can change the place via xrandr
+    #output DVI-0
+
+# status_command i3status
+status_command i3status -c ~/.config/i3/i3status.conf
+
+colors {
+        background #2F2F2F
+        statusline #eeeeee
+        separator #666666
+        #                     border  backgr. text
+        focused_workspace     #a9a9a9 #222222 #a9a9a9
+        active_workspace      #a9a9a9 #222222 #a9a9a9
+        inactive_workspace    #444444 #222222 #444444
+        urgent_workspace      #4A4A4A #4A4A4A #a9a9a9
+        }
+
+    }
+    
+
+# DarkGrey background with white text - not focus grey background - black text
+# Windows decoration colors
+# class                 border  backgr. text    indicator
+client.placeholder      #242424 #242424 #242424
+client.background       #242424 #242424 #242424
+client.focused          #4A4A4A #4A4A4A #e5e5e5 #4A4A4A
+client.unfocused        #222222 #222222 #aaaaaa #222222
+client.focused_inactive #222222 #222222 #a9a9a9 #222222
+client.urgent           #4A4A4A #4A4A4A #f7f7f7 #4A4A4A
+
+
+###########################################################
+################### DISTRO DEPENDENT ######################
+###########################################################
+
+#terminal
+
+# only in need you can figure out hidden settings on your distro with dconf-editor
+# gsettings set org.cinnamon.desktop.default-applications.terminal exec /usr/bin/terminator
+# gsettings set org.cinnamon.desktop.default-applications.terminal exec /usr/bin/gnome-terminal
+
+# bindsym $mod+Return exec gnome-terminal;focus
+bindsym $mod+Return exec i3-sensible-terminal;focus
+
+
+#filemanager focus
+for_window [class="Nemo"] focus
+
+bindsym $mod+e exec nemo;focus
+
+
+# USER APPLICATIONS TO START AT BOOT
+
+#Authentication dialog
+
+#arch/antergos
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+#Linux Mint
+# exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
+# update
+
+#Linux Mint
+# exec mintupdate-launcher
+
+# Arch
+#exec pamac-tray
+
+# bluetooth
+# exec blueberry-tray
+#exec --no-startup-id blueman-applet
+
+# network
+#antergos
+# exec --no-startup-id nm-applet
+
+#linux mint
+#exec network-manager-applet
+
+# Configure display settings
+# exec --no-startup-id xrandr --dpi 94
