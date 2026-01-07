@@ -14,6 +14,12 @@ vim.keymap.set('v', 'j', 'k', { noremap = true })
 vim.keymap.set('n', 'k', 'j', { noremap = true })
 vim.keymap.set('n', 'j', 'k', { noremap = true })
 
+-- vim.keymap.set('n', 'j', 'k', { noremap = true })
+-- vim.keymap.set('n', 'j', 'k', { noremap = true })
+
+-- vim.keymap.set('n', 'j', 'k', { noremap = true })
+-- vim.keymap.set('n', 'j', 'k', { noremap = true })
+
 vim.keymap.set('n', '<C-x>', function()
   print 'Hello'
 end)
@@ -28,3 +34,5 @@ end
 
 vim.keymap.set('n', '<C-s>', _writeAllBuffers, { desc = 'Write all buffers' })
 vim.keymap.set('n', '<C-x>', _closeAllWindows, { desc = 'Close all windows' })
+
+vim.keymap.set('n', '<C-j>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })

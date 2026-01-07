@@ -23,7 +23,7 @@
 freetype-font=Noto Sans
 
 # Monospace Font (string)
-#freetype-monofont=Monospace
+freetype-monofont=DejaVu Sans Mono
 
 # Font size in pixels (integer)
 #freetype-fontsize=0
@@ -633,7 +633,7 @@ freetype-rel-fontsize=20
 #marq-y=0
 
 # Marquee position (integer)
-#marq-position=-1
+marq-position=0
 
 # Opacity (integer)
 #marq-opacity=255
@@ -671,7 +671,7 @@ freetype-rel-fontsize=20
 #logo-opacity=255
 
 # Logo position (integer)
-#logo-position=-1
+logo-position=0
 
 [rss] # RSS and Atom feed display
 
@@ -685,7 +685,7 @@ freetype-rel-fontsize=20
 #rss-y=0
 
 # Text position (integer)
-#rss-position=-1
+rss-position=0
 
 # Opacity (integer)
 #rss-opacity=255
@@ -799,7 +799,7 @@ freetype-rel-fontsize=20
 #audiobargraph_v-transparency=255
 
 # Bargraph position (integer)
-#audiobargraph_v-position=-1
+audiobargraph_v-position=0
 
 # Bar width in pixel (integer)
 #audiobargraph_v-barWidth=10
@@ -4004,7 +4004,7 @@ vout=any
 #osd=1
 
 # Text rendering module (string)
-#text-renderer=
+text-renderer=any
 
 # Use subtitle file (string)
 #sub-file=
@@ -4262,7 +4262,7 @@ vout=any
 #packetizer=
 
 # VoD server module (string)
-#vod-server=
+vod-server=any
 
 # Use a plugins cache (boolean)
 #plugins-cache=1

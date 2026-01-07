@@ -4,7 +4,7 @@ local servers = require 'plugins.tables.lsp_servers'
 return {
   {
     'neovim/nvim-lspconfig',
-    event = 'BufEnter',
+    event = 'VeryLazy',
     dependencies = {
       { 'mason-org/mason.nvim', opts = {} },
       'mason-org/mason-lspconfig.nvim',
