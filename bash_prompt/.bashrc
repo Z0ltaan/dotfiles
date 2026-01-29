@@ -56,23 +56,13 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-# curr_git_branch="X"
-# [[ -d "$(pwd)/.git" ||  "$(pwd)" =~ ".git" ]] && curr_git_branch="$(git branch | grep '*' | cut -c 3-)"
-# echo "ye"
-# if [[ -d "$(pwd)/\.git)" || "$(pwd)" =~ ".git" ]]; then 
-#   curr_git_branch="$(git branch | grep '*' | cut -c 3-)"
-# fi
 
 if [ "$color_prompt" = yes ]; then
     . ~/git-prompt.sh
-    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\$ '
-    # curr_git_branch="X"
-    # [ -n $(__git_ps1 "(%s)") ] && curr_git_branch="$(__git_ps1 "(%s)")"
-    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]$(__git_ps1 " [\[\e[3m\] %s \[\e[0m\]]") \[\033[01;34m\]\w\[\033[00m\]\$ '
-    PROMPT_COMMAND='__git_ps1 "${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] " "\[\033[01;34m\]\w\[\033[00m\]\$ " "\[\e[32m\]🭮\[\e[7m\] ⎇  \[\e[3m\]%s\[\e[23m\] \[\e[27m\]🭬\[\e[0m\] "'
-# PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PROMPT_COMMAND='__git_ps1 "${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] " "\[\033[01;34m\]\w\[\033[00m\]\$ " "\[\033[36m\]🭨 🭬\[\033[1m\] \[\033[3m\]%s\[\033[23m\] ⎇  ❱\[\033[0m\] "'
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    . ~/git-prompt.sh
+    PROMPT_COMMAND='__git_ps1 "${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] " "\[\033[01;34m\]\w\[\033[00m\]\$ " "\[\033[32m\]🭮 \[\033[7m\] ⎇  \[\033[3m\]%s\[\033[23m\] \[\033[27m\]🭬\[\033[0m\] "'
 fi
 unset color_prompt force_color_prompt
 
@@ -96,12 +86,15 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ls='lsd --color=auto'
+# alias ls='lsd --color=auto'
 alias ll='lsd -alF'
+alias lt='lsd --tree'
 alias ..='cd ..'
 alias mkbd='mkdir build'
 alias n='nvim'
 alias nvc='cd ~/.config/nvim/'
+# guifg=#242b38 guibg=#97ca72
+alias fzf="fzf --color='bg:#242b38,hl:red:bold,hl+:red:bold'"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
